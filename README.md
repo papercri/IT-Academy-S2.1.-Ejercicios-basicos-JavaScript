@@ -33,10 +33,8 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
    ```bash
    cd 01-arrow-functions
    ```
-3. Ejecutar el archivo con Node.js:
-   ```bash
-   node index.js
-   ```
+3. Abrir en el nnavegador el archivo index.html de cada carpeta:
+
 
 ## Requisitos de Realización
 Para completar estos ejercicios y recibir una calificación, es necesario resolver los ejercicios propuestos y subir la solución a un repositorio en GIT.
@@ -155,8 +153,5 @@ Para completar estos ejercicios y recibir una calificación, es necesario resolv
 ### Nivel 3
 6. **Promise.all:** Crear dos promesas con tiempos distintos y esperar ambas con `Promise.all()`.
 
----
 
-## Entrega
-Subir la solución al **repositorio GIT** y compartir el enlace para su evaluación.
 
