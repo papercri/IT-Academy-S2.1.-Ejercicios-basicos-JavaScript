@@ -10,7 +10,7 @@ Este repositorio contiene una serie de ejercicios para practicar conceptos clave
 Cada conjunto de ejercicios está organizado en carpetas según el tema:
 
 ```
-/IT-Academy-S2.1.-Ejercicios-b-sicos-JavaScript
+/IT-Academy-S2.1.-Ejercicios-basicos-JavaScript
   ├── 01-arrow-functions
   ├── 02-ternary-operator
   ├── 03-callbacks
@@ -25,9 +25,9 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
 ## Cómo Usar
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/papercri/IT-Academy-S2.1.-Ejercicios-b-sicos-JavaScript.git
+   git clone https://github.com/papercri/IT-Academy-S2.1.-Ejercicios-basicos-JavaScript.git
    
-   cd IT-Academy-S2.1.-Ejercicios-b-sicos-JavaScript
+   cd IT-Academy-S2.1.-Ejercicios-basicos-JavaScript
    ```
 2. Navegar hasta la carpeta del ejercicio que deseas resolver:
    ```bash
