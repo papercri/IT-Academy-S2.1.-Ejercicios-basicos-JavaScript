@@ -10,7 +10,7 @@ Este repositorio contiene una serie de ejercicios para practicar conceptos clave
 Cada conjunto de ejercicios está organizado en carpetas según el tema:
 
 ```
-/js-exercises
+/IT-Academy-S2.1.-Ejercicios-b-sicos-JavaScript
   ├── 01-arrow-functions
   ├── 02-ternary-operator
   ├── 03-callbacks
@@ -25,8 +25,9 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
 ## Cómo Usar
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/usuario/js-exercises.git
-   cd js-exercises
+   git clone https://github.com/papercri/IT-Academy-S2.1.-Ejercicios-b-sicos-JavaScript.git
+   
+   cd IT-Academy-S2.1.-Ejercicios-b-sicos-JavaScript
    ```
 2. Navegar hasta la carpeta del ejercicio que deseas resolver:
    ```bash
@@ -36,7 +37,6 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
    ```bash
    node index.js
    ```
-4. Modificar el código en `index.js` para completar los ejercicios.
 
 ## Requisitos de Realización
 Para completar estos ejercicios y recibir una calificación, es necesario resolver los ejercicios propuestos y subir la solución a un repositorio en GIT.
