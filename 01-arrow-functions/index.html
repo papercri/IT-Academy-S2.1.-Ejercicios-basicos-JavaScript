@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arrow Functions</title>
 </head>
 <body>
-    
+    <h1>Ejercicio 1.1: Arrow functions</h1>
+    <p>
+        Abre la consola para ver el ejercicio
+    </p>
+    <h2>Nivel 1</h2>
+
+    <h3>Ejercicio 1</h3>
+    <p>
+    Conversión de funciones: Tienes una función add que acepta dos parámetros y devuelve su suma. Conviértela en una función de flecha. Por ejemplo:function add(a, b) {return a + b;}.
+    </p>
+    <h3>Ejercicio 2</h3>
+    <p>
+    Función de flecha sin parámetros: Crea una función de flecha llamada randomNumber que no necesite parámetros y que devuelva un número aleatorio entre 0 y 100.
+    </p>
+    <h3>Ejercicio 3</h3>
+    <p>
+    Uso de 'this' en las funciones de flecha: Crea una clase person que tenga una propiedad name y una función greet que utilice una función de flecha. La función debe imprimir un saludo que incluya el nombre de la persona. Por ejemplo: console.log(Hola, ${this.name});.
+    </p>
+    <h2>Nivel 2</h2>
+
+
+    <h3>Ejercicio 4</h3>
+    <p>
+    Función de flecha dentro de un loop: Crea una función llamada printNumbers que acepte un array de números y utilice un loop for para imprimir cada número en la consola utilizando una función de flecha.
+    </p>
+    <h2>Nivel 3</h2>
+    <h3>Ejercicio 5</h3>
+    <p>
+    Función de flecha con 'setTimeout': Crea una función de flecha que imprima un mensaje en la consola después de esperar 3 segundos.
+    </p>
+
+    <script>
+        console.log("Ejercicio 1: ");
+
+            let add = (a, b) => a + b;
+            console.log(add(2, 7));
+
+
+        console.log("Ejercicio 2: ");
+
+            let randomNumber = () => Math.floor(Math.random() * 101);
+
+            console.log(randomNumber());
+        
+        console.log("Ejercicio 3: ");
+
+            class Person {
+                constructor(name) {
+                    this.name = name;
+                }
+
+                greet = () => {
+                    console.log(`Hola, ${this.name}`);
+                };
+            }
+
+            const persona = new Person("Cris");
+            persona.greet(); 
+
+        console.log("Ejercicio 4: ");
+
+            let printNumbers = (numbers) => {
+                for (let num of numbers) {
+                    (() => console.log(num))();
+                }
+            };
+
+            printNumbers([10, 20, 30, 40, 50]);
+
+        console.log("Ejercicio 5: ");
+
+        let mensajeConTimeout = () => {
+            setTimeout(() => console.log("Hola! Ya han pasado 3 segundos"), 3000);
+        };
+
+        mensajeConTimeout();
+    </script>
+
+
 </body>
 </html>

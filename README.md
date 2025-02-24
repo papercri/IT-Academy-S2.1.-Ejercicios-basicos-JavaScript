@@ -29,11 +29,7 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
    
    cd IT-Academy-S2.1.-Ejercicios-basicos-JavaScript
    ```
-2. Navegar hasta la carpeta del ejercicio que deseas resolver:
-   ```bash
-   cd 01-arrow-functions
-   ```
-3. Abrir en el nnavegador el archivo index.html de cada carpeta:
+2. Abrir en el navegador el archivo index.html 
 
 
 ## Requisitos de Realización

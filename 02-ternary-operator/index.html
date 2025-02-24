@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ternary Operator</title>
 </head>
 <body>
-    
+    <h1>Ejercicio 1.2: Operador ternario</h1>
+    <p>
+        Abre la consola para ver el ejercicio
+    </p>
+    <h2>Nivel 1</h2>
+    <h3>Ejercicio 1</h3>
+    <p>Operador ternario básico: Escribe una función puedeConducir que acepte la edad como parámetro y utilice el operador ternario para determinar si el usuario puede conducir. Si la edad es 18 o más, debe devolver 'Puedes conducir'. Si no, debe devolver 'No puedes conducir'.
+    </p>
+    <h3>Ejercicio 2</h3>
+    <p> Uso con operadores de comparación: Escribe una expresión que utilice el operador ternario para determinar cuál de los dos números dados (num1 y num2) es mayor. Si num1 es mayor, devuelve 'num1 es mayor'. Si no, devuelve 'num2 es mayor'.</p>        
+    <h2>Nivel 2</h2>
+    <h3>Ejercicio 3</h3>
+    <p>Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.</p>
+    <p>Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.
+    </p>
+    <h2>Nivel 3</h2>
+    <h3>Ejercicio 4</h3>
+    <p>Operador ternario en un bucle: Escribe una función parOImpar que acepte un array de números y utilice un bucle para recorrer el array. Dentro del bucle, utiliza el operador ternario para determinar si cada número es par o impar.</p>
+
+    <script>
+        console.log("Ejercicio 1: ");
+
+            function puedeConducir (edad){
+                if(Number.isInteger(edad)){
+                    edad >= 18 ? console.log("Puedes conducir") : console.log("No puedes conducir");
+                } else{
+                    console.log("Por favor escriba la edad del conductor");
+                }
+            };
+
+            puedeConducir(10);
+            puedeConducir(60);
+            puedeConducir(10.8);
+        
+        console.log("Ejercicio 2: ");
+
+            function comparacionNumeros(num1, num2){
+                if ((!isNaN(num1))&&(!isNaN(num2))){
+                   if(num1!=num2){
+                    num1 > num2 ? console.log("El numero 1 es mayor del numero 2") : console.log("El numero 2 es mayor del numero 1") ;
+                   }
+                     else {
+                        console.log("por favor introduce dos numeros diferentes");
+                     }
+                } else {
+                    console.log("por favor introduce dos numeros");
+                }
+            }
+
+            comparacionNumeros(2,4);
+            comparacionNumeros(2.4,1);
+            comparacionNumeros(2,2);
+            comparacionNumeros("a",2);
+            
+        console.log("Ejercicio 3.1: ");
+
+
+            function enlaceDeOperadoresTernarios(num) {
+                return isNaN(num) 
+                    ? console.log("por favor introduce un numero") 
+                    : (num === 0) 
+                        ? console.log("El numero es CERO") 
+                        : (num > 0) 
+                            ? console.log("El numero es POSITIVO") 
+                            : console.log("El numero es NEGATIVO");
+            }
+
+            enlaceDeOperadoresTernarios(10);
+            enlaceDeOperadoresTernarios(-10);
+            enlaceDeOperadoresTernarios(0);
+            enlaceDeOperadoresTernarios("ok");
+
+        console.log("Ejercicio 3.2: ");
+
+        function encontrarMaximo(a, b, c) {
+    return (isNaN(a) || isNaN(b) || isNaN(c)) 
+        ? console.log("por favor introduce tres numeros") 
+        : ((a == b) || (a == c) || (b == c))
+        ? console.log("Hay dos numeros iguales, pon tres numeros diferentes") 
+        : (a > b && a > c) 
+            ? console.log("A es el numero mayor")
+            : (b > a && b > c) 
+                ? console.log("B es el numero mayor")
+                : console.log("C es el numero mayor");
+        }
+
+        encontrarMaximo(10, 20, 30);
+        encontrarMaximo(30, 20, 10);
+        encontrarMaximo(30, 60, 10);
+        encontrarMaximo(10, 10, 20);
+        encontrarMaximo("a", 20, 30);
+            
+
+            
+    </script>
 </body>
 </html>
