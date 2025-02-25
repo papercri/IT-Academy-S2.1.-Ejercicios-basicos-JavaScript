@@ -49,29 +49,28 @@
         console.log("Ejercicio 2: ");
 
             let randomNumber = () => Math.floor(Math.random() * 101);
-
             console.log(randomNumber());
         
         console.log("Ejercicio 3: ");
 
-            class Person {
+            class Persona {
                 constructor(name) {
                     this.name = name;
                 }
 
-                greet = () => {
+                saludo = () => {
                     console.log(`Hola, ${this.name}`);
                 };
             }
 
-            const persona = new Person("Cris");
-            persona.greet(); 
+            let persona = new Persona("Cris");
+            persona.saludo(); 
 
         console.log("Ejercicio 4: ");
 
             let printNumbers = (numbers) => {
                 for (let num of numbers) {
-                    (() => console.log(num))();
+                  console.log(num)
                 }
             };
 

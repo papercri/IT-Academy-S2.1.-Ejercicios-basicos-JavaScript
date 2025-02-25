@@ -19,8 +19,9 @@
         <h3>Ejercicio 2</h3>
         <p> Uso con operadores de comparación: Escribe una expresión que utilice el operador ternario para determinar cuál de los dos números dados (num1 y num2) es mayor. Si num1 es mayor, devuelve 'num1 es mayor'. Si no, devuelve 'num2 es mayor'.</p>        
         <h2>Nivel 2</h2>
-        <h3>Ejercicio 3</h3>
+        <h3>Ejercicio 3.1</h3>
         <p>Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.</p>
+        <h3>Ejercicio 3.2</h3>
         <p>Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.
         </p>
         <h2>Nivel 3</h2>
@@ -33,7 +34,7 @@
             function puedeConducir (edad){
                 if(Number.isInteger(edad)){
                     edad >= 18 ? console.log("Puedes conducir") : console.log("No puedes conducir");
-                } else{
+                } else {
                     console.log("Por favor escriba la edad del conductor");
                 }
             };
@@ -84,8 +85,8 @@
         function encontrarMaximo(a, b, c) {
             return (isNaN(a) || isNaN(b) || isNaN(c)) 
                 ? console.log("por favor introduce tres numeros") 
-                : ((a == b) || (a == c) || (b == c))
-                ? console.log("Hay dos numeros iguales, pon tres numeros diferentes") 
+                : ((a == b) && (b == c))
+                ? console.log("Hay tres numeros iguales, pon almenos dos numeros diferentes") 
                 : (a > b && a > c) 
                     ? console.log("A es el numero mayor")
                     : (b > a && b > c) 
@@ -96,11 +97,19 @@
         encontrarMaximo(10, 20, 30);
         encontrarMaximo(30, 20, 10);
         encontrarMaximo(30, 60, 10);
-        encontrarMaximo(10, 10, 20);
+        encontrarMaximo(10, 10, 10);
+        encontrarMaximo(20, 10, 10);
         encontrarMaximo("a", 20, 30);
             
     console.log("Ejercicio 4: ");
-            
+
+        function parOImpar(numbers){
+            for (let n of numbers) {
+                console.log(!isNaN(n) ? (n % 2 === 0 ? `${n} es un número par` : `${n} es un número impar`) : `${n} no es un número válido`);
+            }
+        }
+        
+        parOImpar([2, 7, 8]);
     </script>
 </body>
 </html>
