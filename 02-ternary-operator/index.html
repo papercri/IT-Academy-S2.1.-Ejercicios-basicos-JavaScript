@@ -16,53 +16,51 @@
         <h3>Ejercicio 1</h3>
         <p>Operador ternario básico: Escribe una función puedeConducir que acepte la edad como parámetro y utilice el operador ternario para determinar si el usuario puede conducir. Si la edad es 18 o más, debe devolver 'Puedes conducir'. Si no, debe devolver 'No puedes conducir'.
         </p>
-        <h3>Ejercicio 2</h3>
-        <p> Uso con operadores de comparación: Escribe una expresión que utilice el operador ternario para determinar cuál de los dos números dados (num1 y num2) es mayor. Si num1 es mayor, devuelve 'num1 es mayor'. Si no, devuelve 'num2 es mayor'.</p>        
-        <h2>Nivel 2</h2>
-        <h3>Ejercicio 3.1</h3>
-        <p>Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.</p>
-        <h3>Ejercicio 3.2</h3>
-        <p>Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.
-        </p>
-        <h2>Nivel 3</h2>
-        <h3>Ejercicio 4</h3>
-        <p>Operador ternario en un bucle: Escribe una función parOImpar que acepte un array de números y utilice un bucle para recorrer el array. Dentro del bucle, utiliza el operador ternario para determinar si cada número es par o impar.</p>
-    </div>
     <script>
         console.log("Ejercicio 1: ");
 
-            function puedeConducir (edad){
-                if(Number.isInteger(edad)){
-                    edad >= 18 ? console.log("Puedes conducir") : console.log("No puedes conducir");
-                } else {
-                    console.log("Por favor escriba la edad del conductor");
-                }
-            };
+        function puedeConducir (edad){
+            if(Number.isInteger(edad)){
+                edad >= 18 ? console.log("Puedes conducir") : console.log("No puedes conducir");
+            } else {
+                console.log("Por favor escriba la edad del conductor");
+            }
+        };
 
-            puedeConducir(10);
-            puedeConducir(60);
-            puedeConducir(10.8);
-        
+        puedeConducir(10);
+        puedeConducir(60);
+        puedeConducir(10.8);
+
+    </script>
+        <h3>Ejercicio 2</h3>
+        <p> Uso con operadores de comparación: Escribe una expresión que utilice el operador ternario para determinar cuál de los dos números dados (num1 y num2) es mayor. Si num1 es mayor, devuelve 'num1 es mayor'. Si no, devuelve 'num2 es mayor'.</p>    
+    <script>
         console.log("Ejercicio 2: ");
 
-            function comparacionNumeros(num1, num2){
-                if ((!isNaN(num1))&&(!isNaN(num2))){
-                   if(num1!=num2){
-                    num1 > num2 ? console.log("El numero 1 es mayor del numero 2") : console.log("El numero 2 es mayor del numero 1") ;
-                   }
-                     else {
-                        console.log("por favor introduce dos numeros diferentes");
-                     }
-                } else {
-                    console.log("por favor introduce dos numeros");
-                }
+        function comparacionNumeros(num1, num2){
+            if ((!isNaN(num1))&&(!isNaN(num2))){
+            if(num1!=num2){
+                num1 > num2 ? console.log("El numero 1 es mayor del numero 2") : console.log("El numero 2 es mayor del numero 1") ;
             }
+                else {
+                    console.log("por favor introduce dos numeros diferentes");
+                }
+            } else {
+                console.log("por favor introduce dos numeros");
+            }
+        }
 
-            comparacionNumeros(2,4);
-            comparacionNumeros(2.4,1);
-            comparacionNumeros(2,2);
-            comparacionNumeros("a",2);
-            
+        comparacionNumeros(2,4);
+        comparacionNumeros(2.4,1);
+        comparacionNumeros(2,2);
+        comparacionNumeros("a",2);
+
+    </script>    
+        <h2>Nivel 2</h2>
+        <h3>Ejercicio 3.1</h3>
+        <p>Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.</p>
+    <script>
+
         console.log("Ejercicio 3.1: ");
 
             function enlaceDeOperadoresTernarios(num) {
@@ -79,7 +77,11 @@
             enlaceDeOperadoresTernarios(-10);
             enlaceDeOperadoresTernarios(0);
             enlaceDeOperadoresTernarios("ok");
-
+    </script>    
+        <h3>Ejercicio 3.2</h3>
+        <p>Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.
+        </p>
+    <script>
         console.log("Ejercicio 3.2: ");
 
         function encontrarMaximo(a, b, c) {
@@ -101,15 +103,23 @@
         encontrarMaximo(20, 10, 10);
         encontrarMaximo("a", 20, 30);
             
-    console.log("Ejercicio 4: ");
+
+    </script>    
+        <h2>Nivel 3</h2>
+        <h3>Ejercicio 4</h3>
+        <p>Operador ternario en un bucle: Escribe una función parOImpar que acepte un array de números y utilice un bucle para recorrer el array. Dentro del bucle, utiliza el operador ternario para determinar si cada número es par o impar.</p>
+    <script>
+        console.log("Ejercicio 4: ");
 
         function parOImpar(numbers){
-            for (let n of numbers) {
-                console.log(!isNaN(n) ? (n % 2 === 0 ? `${n} es un número par` : `${n} es un número impar`) : `${n} no es un número válido`);
-            }
+        for (let n of numbers) {
+            console.log(!isNaN(n) ? (n % 2 === 0 ? `${n} es un número par` : `${n} es un número impar`) : `${n} no es un número válido`);
         }
-        
+        }
+
         parOImpar([2, 7, 8]);
-    </script>
+
+    </script>    
+    </div>
 </body>
 </html>

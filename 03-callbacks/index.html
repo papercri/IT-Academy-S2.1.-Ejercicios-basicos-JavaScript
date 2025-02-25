@@ -16,40 +16,36 @@
         <h3>Ejercicio 1</h3>
         <p>Callback básico: Escribe una función llamada procesar que acepte dos parámetros: un número y una función de callback. La función procesar debe invocar la función de callback, pasando el número como parámetro.
         </p>
+        <script>
+            console.log("Ejercicio 1");
+
+                function procesar(numero, callback) {
+                    return callback(numero);
+                }
+                function param(n){
+                    return n
+                }   
+            console.log(procesar(2, param));
+        </script>
         <h3>Ejercicio 2</h3>
         <p>Callbacks con operaciones matemáticas: Escribe una función calculadora que acepte tres parámetros: dos números y una función de callback. La función calculadora debe invocar la función de callback con los dos números como parámetros. Luego, llama calculadora con una función que realice la suma de los dos números.
         </p>
+        <script>
+        console.log("Ejercicio 2");
+
+        function calculadora(a, b, callback){
+            return callback(a, b);
+            }
+            function suma(a, b){
+            return a + b;
+            }
+        console.log(calculadora(5, 2, suma));
+        </script>
         <h2>Nivel 2</h2>
         <h3>Ejercicio 3</h3>
         <p> Uso de callbacks en funciones asíncronas: Escribe una función esperarISaludar que acepte dos parámetros: un nombre y una función de callback. La función debe esperar 2 segundos y entonces invocar la función de callback, pasando el nombre como parámetro.</p>
-        <h3>Ejercicio 4</h3>
-        <p>Callbacks con arrays: Escribe una función procesarElements que acepte dos parámetros: un array y una función de callback. La función procesarElements debe invocar la función de callback por cada elemento del array.</p>
-        <h2>Nivel 3</h2>
-        <h3>Ejercicio 5</h3>
-        <p>Escribe una función procesarCadena que acepte dos parámetros: una cadena de caracteres y una función de callback. La función procesarCadena debe convertir la cadena a mayúsculas y entonces invocar la función de callback con la cadena transformada.</p>
-    </div>
-    <script>
-        console.log("Ejercicio 1");
-
-            function procesar(numero, callback) {
-                return callback(numero);
-            }
-            function param(n){
-                return n
-            }   
-            console.log(procesar(2, param));
-
-        console.log("Ejercicio 2");
-
-            function calculadora(a, b, callback){
-                return callback(a, b);
-            }
-            function suma(a, b){
-                return a + b;
-            }
-            console.log(calculadora(5, 2, suma));
-
-        console.log("Ejercicio 3");
+        <script>
+            console.log("Ejercicio 3");
 
             function esperarISaludar(name, callback){
                 setTimeout(() => {
@@ -60,8 +56,12 @@
                 console.log(`Hola, ${nombre}!`);
             }
             console.log(esperarISaludar("Cris", saludar));
-
-        console.log("Ejercicio 4");
+            
+        </script>
+        <h3>Ejercicio 4</h3>
+        <p>Callbacks con arrays: Escribe una función procesarElements que acepte dos parámetros: un array y una función de callback. La función procesarElements debe invocar la función de callback por cada elemento del array.</p>
+        <script>
+            console.log("Ejercicio 4");
 
             function procesarElements(arr, callback){
                 for(let a of arr){
@@ -72,20 +72,25 @@
                 console.log(a);
             }
             console.log(procesarElements([3,4,7], imprimir));
-
-        console.log("Ejercicio 5");
+        </script>
+        <h2>Nivel 3</h2>
+        <h3>Ejercicio 5</h3>
+        <p>Escribe una función procesarCadena que acepte dos parámetros: una cadena de caracteres y una función de callback. La función procesarCadena debe convertir la cadena a mayúsculas y entonces invocar la función de callback con la cadena transformada.</p>
+        <script>
+            console.log("Ejercicio 5");
             
-        function procesarCadena(cadena, callback) {
-            let cadenaMayusculas = cadena.toUpperCase(); 
-            callback(cadenaMayusculas); 
-        }
-
-        function mostrarResultado(resultado) {
-            console.log(`Cadena transformada en mayusculas: ${resultado}`);
-        }
-
-        procesarCadena("hola soy cris", mostrarResultado);
-        
-    </script>
+            function procesarCadena(cadena, callback) {
+                let cadenaMayusculas = cadena.toUpperCase(); 
+                callback(cadenaMayusculas); 
+            }
+    
+            function mostrarResultado(resultado) {
+                console.log(`Cadena transformada en mayusculas: ${resultado}`);
+            }
+    
+            procesarCadena("hola soy cris", mostrarResultado);
+            
+        </script>
+    </div>
 </body>
 </html>
