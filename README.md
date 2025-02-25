@@ -29,11 +29,13 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
    
    cd IT-Academy-S2.1.-Ejercicios-basicos-JavaScript
    ```
-2. Abrir en el navegador el archivo index.html 
+2. Abrir en el navegador el archivo index.html
+
+3. haz click en los links para abrir cada conjunto de ejercicios
+
+4. abre la consola del navegador para ver los ejercicios en función
 
 
-## Requisitos de Realización
-Para completar estos ejercicios y recibir una calificación, es necesario resolver los ejercicios propuestos y subir la solución a un repositorio en GIT.
 
 ## Objetivos
 - Comprender y practicar el uso de las funciones de flecha.
