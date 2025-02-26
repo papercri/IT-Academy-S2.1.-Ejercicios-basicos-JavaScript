@@ -15,6 +15,12 @@
         <h2>Nivel 1</h2>
         <h3>Ejercicio 1</h3>
         <p><strong>forEach:</strong> Tiene un array de nombres. Utiliza forEach para imprimir cada nombre en la consola: let nombres = ['Anna', 'Bernat', 'Clara'];</p>
+        <pre>
+            let nombres = ['Anna', 'Bernat', 'Clara'];
+            nombres.forEach(function(nombre) {
+                console.log(nombre);
+            });
+        </pre>
         <script>
             console.log("Ejercicio 1");
 
@@ -27,19 +33,28 @@
 
         <h3>Ejercicio 2</h3>
         <p><strong>for-of:</strong> Tiene un array de nombres. Utiliza un bucle for-of para imprimir cada nombre en la consola: let noms = ['Anna', 'Bernat', 'Clara'];</p>
+        <pre>
+            let noms = ['Anna', 'Bernat', 'Clara'];
+            for (let el of noms) {
+                console.log(el);
+            }
+        </pre>
         <script>
             console.log("Ejercicio 2");
 
             let noms = ['Anna', 'Bernat', 'Clara'];
             for (let el of noms) {
-            console.log(el);
+                console.log(el);
             }
-
-
         </script>
 
         <h3>Ejercicio 3</h3>
         <p><strong>filtro:</strong> Tiene un array de números. Use filtro para crear una nueva array que sólo contenga los números pares. let numeros = [1, 2, 3, 4, 5, 6];</p>
+        <pre>
+            let numeros = [1, 2, 3, 4, 5, 6];
+            let filteredNums = numeros.filter(n => n%2===0);
+            console.log(filteredNums);
+        </pre>
         <script>
             console.log("Ejercicio 3");
 
@@ -52,6 +67,13 @@
         <h2>Nivel 2</h2>
         <h3>Ejercicio 4</h3>
         <p><strong>for-in:</strong> Tiene un objeto con pares clave-valor: let obj = { nombre: Ola, edad: 25, ciudad: 'Barcelona' }; Utiliza un bucle for-in para imprimir en la consola cada clave y su correspondiente valor.</p>
+        <pre>
+            let obj = { nombre: "Ola", edad: 25, ciudad: "Barcelona" };
+
+            for (let index in obj){
+                console.log(index + ": " + obj[index]);
+            }
+        </pre>
         <script>
             console.log("Ejercicio 4");
 
@@ -64,6 +86,15 @@
 
         <h3>Ejercicio 5</h3>
         <p><strong>for-of con break:</strong> Tiene un array de números. Utiliza un bucle for-of para imprimir en la consola los números hasta encontrar el número 5, entonces detiene el bucle: let numeros2 = [1, 2, 3, 4, 5, 6];</p>
+        <pre>
+            let numeros2 = [1, 2, 3, 4, 5, 6];
+            for (let n of numeros2){
+                if (n === 5) {
+                    break;  
+                }
+                console.log(n);  
+            }
+        </pre>
         <script>
             console.log("Ejercicio 5");
             let numeros2 = [1, 2, 3, 4, 5, 6];
@@ -79,6 +110,13 @@
         <h2>Nivel 3</h2>
         <h3>Ejercicio 6</h3>
         <p><strong>for-of con index:</strong> Utiliza un bucle for-of para imprimir en la consola cada elemento del array y su posición (index): let noms2 = ['Anna', 'Bernat', 'Clara']</p>
+        <pre>
+            let noms2 = ['Anna', 'Bernat', 'Clara'];
+
+            for (let n of noms2){
+                console.log(n + ": " + noms2.indexOf(n));
+            }
+        </pre>
         <script>
             console.log("Ejercicio 6");
 

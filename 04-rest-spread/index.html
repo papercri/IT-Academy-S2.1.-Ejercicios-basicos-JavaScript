@@ -15,6 +15,12 @@
         <h2>Nivel 1</h2> 
         <h3>Ejercicio 1</h3>
         <p><strong>Operador Spread en Arrays:</strong> Crea dos arrays, array1 y array2. Usa el operador spread para crear una tercera array que contenga todos los elementos de array1 y array2.</p>
+        <pre>
+            const array1 = [1, 2, 3];
+            const array2 = [4, 5, 6];
+            const array3 = [...array1, ...array2];
+            console.log(array3); 
+        </pre>
         <script>
             console.log("Ejercicio 1");
             const array1 = [1, 2, 3];
@@ -24,6 +30,16 @@
         </script>
             <h3>Ejercicio 2</h3>
             <p> <strong>Operador Rest en Funciones:</strong> Crea una función 'suma' que utilice el operador rest para aceptar un número indeterminado de argumentos y devolver su suma.</p>
+            <pre>
+                function suma(...arr) {
+                    let total = 0;
+                    for (let a of arr) {
+                        total += a;
+                    }
+                    return total;
+                    }
+                    console.log(suma(1,2,3,12));
+            </pre>
         <script>
             console.log("Ejercicio 2");
 
@@ -40,6 +56,22 @@
             <h2>Nivel 2</h2> 
             <h3>Ejercicio 3</h3>
             <p><strong>Copiando objetos con Spread:</strong> Crea un objeto 'objeto1'. Luego crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. Cambia una propiedad de 'objeto2' y comprueba que 'objeto1' no ha cambiado.</p>
+            <pre>
+                let objeto1 = {
+                    Name: "Cris",
+                    Age: 47,
+                    Code: 1,
+                    Shop: ["milk", "bread", "soup"]
+                };
+                console.log(objeto1);
+                let objeto2 = {...objeto1};
+                console.log(objeto2);
+    
+                objeto2.Name = "Romi";
+      
+                console.log("Objeto 1: " + JSON.stringify(objeto1));
+                console.log("Objeto 2: " + JSON.stringify(objeto2));
+            </pre>
         <script>    
             console.log("Ejercicio 3");
             let objeto1 = {
@@ -61,6 +93,15 @@
         </script>
             <h3>Ejercicio 4</h3>
             <p<strong>>Resto en Destructuring:</strong> Crea un array con varios elementos. Utiliza destructuring y el operador resto para asignar los primeros dos elementos a variables, y después asignar el resto de los elementos a una tercera variable.</p>
+            <pre>
+                let colores = ["Amarillo", "Rojo", "Azul", "Verse", "Lila"];
+                let [color1, color2, ...otrosColores] = colores;
+    
+                console.log(color1);
+                console.log(color2);
+                console.log(otrosColores);
+
+            </pre>
         <script>
             console.log("Ejercicio 4");
 
@@ -75,6 +116,16 @@
             <h2>Nivel 3</h2> 
             <h3>Ejercicio 5</h3>
             <p><strong>Spread en Funciones:</strong> Crea una función que acepte tres argumentos. Después, crea un array con tres elementos y llama a la función utilizando el operador spread con esa array.</p>
+            <pre>
+                function spreadFunciones (a=1, b=8, c=true, ...otros){
+                    console.log(`A: ${a}`);
+                    console.log(`B: ${b}`);
+                    console.log(`C: ${c}`);
+                    console.log(`Otros: ${otros}`);
+                }
+                let data = ["Agua", "tierra", 10, 8, "Mar", false, 0.12];
+                spreadFunciones(...data);
+            </pre>
         <script>
             console.log("Ejercicio 5");
 
@@ -90,6 +141,18 @@
         </script>
             <h3>Ejercicio 6</h3>
             <p><strong>Fusionando Objetos con Spread:</strong> Crea dos objetos con propiedades distintas. Utiliza el operador spread para fusionar estos dos objetos en uno nuevo.</p>
+            <pre>
+                let datosGenerales = {
+                    Nombre : "Ana",
+                    Apellido : "Anita",
+                };
+                let comidaFavorita = {
+                    Comida : ["Pollo", "Verduras"],
+                    Bebida : ["Cerveza", "Zumo"]
+                };
+                let todoJunto = {...datosGenerales, ...comidaFavorita}
+                console.log(todoJunto);
+            </pre>
         <script>
             console.log("Ejercicio 6");
 
