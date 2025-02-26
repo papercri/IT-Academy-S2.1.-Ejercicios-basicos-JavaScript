@@ -2,10 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 1.5: Array transformations</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Ejercicio 1.5: Array transformations</h1>
+        <h2>Nivel 1</h2>
+        <h3>Ejercicio 1</h3>
+        <p><strong>Map:</strong> Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que contenga el cuadrado de cada número.</p>
+        <script>
+            console.log("Ejercicio 1");
+
+            let nums = [1, 2, 3, 4]
+            let cuadrado = nums.map(n => Math.pow(n, 2));
+            console.log(cuadrado);
+        </script>
+
+        <h3>Ejercicio 2</h3>
+        <p><strong>Filter:</strong> Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que sólo contenga los números pares.</p>
+        <script>
+            console.log("Ejercicio 2");
+
+            let pares = nums.filter(n => n = n % 2 === 0);
+            console.log(pares);
+        </script>
+
+        <h3>Ejercicio 3</h3>
+        <p><strong>Find:</strong> Tiene un array de números [1, 10 , 8, 11]. Use la función find para encontrar el primer número que es mayor a 10.</p>
+        <script>
+            console.log("Ejercicio 3");
+
+            let numsF = [1, 10 , 8, 11];
+            let found = numsF.find(n => n > 10)
+
+            console.log(found);
+        </script>
+
+        <h3>Ejercicio 4</h3>
+        <p><strong>Reduce:</strong> Tiene un array de números [13, 7, 8, 21]. Utiliza la función Reduce para calcular la suma total de los números.</p>
+        <script>
+            console.log("Ejercicio 4");
+
+            let numsR = [13, 7, 8, 21];
+            let red = numsR.reduce((acc, num) => acc + num, 0)
+
+            console.log(red);
+        </script>
+
+        <h2>Nivel 2</h2>
+        <h3>Ejercicio 5</h3>
+        <p>Dado un array "[ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]", crea una función en una sola línea que haga lo siguiente:</p>
+        <ul>
+            <li>Filtra los números mayores o iguales a 10.</li>
+            <li>Multiplica cada número filtrado por 2.</li>
+            <li>Calcula la suma de los números filtrados y multiplicados por 2.</li>
+            <li>La función debe devolver el resultado de la suma.</li>
+        </ul>
+        <script>
+            console.log("Ejercicio 5");
+
+            let arr = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ];
+
+            function procesarArray(a) {
+                return a.filter(n => n >= 10)            
+                        .map(n => n * 2)                
+                        .reduce((acc, n) => acc + n, 0);
+            }
+            let arrResult = procesarArray(arr);
+            console.log(arrResult);
+        </script>
+
+        <h2>Nivel 3</h2>
+        <h3>Ejercicio 6</h3>
+        <p><strong>Every / Some:</strong> Usa every y some para determinar si todos o algunos de los elementos del array [11, 12, 13, 14] son ​​mayores que 10, respectivamente.</p>
+        <script>
+            console.log("Ejercicio 6");
+            let newArr = [11, 12, 13, 14];
+
+            function mayorDeDiez(a){
+                return a.some(n => n >= 10)
+            };
+            function mayorDeDiez2(a){
+                return a.every(n => n >= 10)
+            };
+           let result = mayorDeDiez(newArr);
+           let result2 = mayorDeDiez2(newArr);
+           console.log(result);
+           console.log(result2);
+        </script>
+
+    </div>
 </body>
 </html>
