@@ -17,40 +17,161 @@
         <h2>Nivel 1</h2>
         <h3>Ejercicio 1</h3>
         <p><strong>Creación de una Promesa:</strong> Crea una promesa que se resuelva después de 2 segundos y que devuelva la cadena de texto 'Hola, mundo'.</p>
+        <pre>
+            let promesa = new Promise(function(resolve, reject) {
+                setTimeout(() => resolve("Hola, mundo"), 2000);
+            });
+        </pre>
         <script>
             console.log("Ejercicio 1");
+
+            let promesa = new Promise(function(resolve, reject) {
+                setTimeout(() => resolve("Hola, mundo"), 2000);
+            });
         </script>
 
         <h3>Ejercicio 2</h3>
         <p><strong>Utilización de una Promesa:</strong> Utiliza la promesa creada en el ejercicio anterior. Crea un .then que imprima el resultado en la consola.</p>
+        <pre>
+            promesa.then(
+                result => console.log(result)
+            );
+        </pre>
         <script>
             console.log("Ejercicio 2");
+
+            promesa.then(
+                result => console.log(result)
+            );
         </script>
 
         <h3>Ejercicio 3</h3>
         <p><strong> Promesa con reject:</strong> Crea una promesa que se resuelva después de 2 segundos si el input es igual a 'Hola', y que la rechace si el input es cualquier otra cosa.</p>
+        <pre>
+            function verificarSaludo(input) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        input === "Hola" 
+                            ? resolve("Todo Correcto!") 
+                            : reject ("Error en el saludo!")
+                    }, 2000);
+                });
+            };
+
+            verificarSaludo("Hola")
+                .then(mensaje => console.log(mensaje))
+                .catch(error => console.log(error));
+            
+            verificarSaludo("Hello")
+                .then(mensaje => console.log(mensaje))
+                .catch(error => console.log(error));
+        </pre>
         <script>
             console.log("Ejercicio 3");
+
+            function verificarSaludo(input) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        input === "Hola" 
+                            ? resolve("Todo Correcto!") 
+                            : reject ("Error en el saludo!")
+                    }, 2000);
+                });
+            };
+
+            verificarSaludo("Hola")
+                .then(mensaje => console.log(mensaje))
+                .catch(error => console.log(error));
+            
+            verificarSaludo("Hello")
+                .then(mensaje => console.log(mensaje))
+                .catch(error => console.log(error));
+                
         </script>
 
         <h3>Ejercicio 4</h3>
         <p><strong>Uso de async/await:</strong> Escribe una función asíncrona que utilice la función await para esperar el resultado de la promesa creada en el ejercicio 1, y que después imprima este resultado en la consola.</p>
+        <pre>
+            async function esperaResultado(){
+                let resultado = await promesa
+                console.log(resultado);
+            }
+            esperaResultado()
+            
+        </pre>
         <script>
             console.log("Ejercicio 4");
+
+            async function esperaResultado(){
+                let resultado = await promesa
+                console.log(resultado);
+            }
+            esperaResultado()
         </script>
 
         <h2>Nivel 2</h2>
         <h3>Ejercicio 5</h3>
         <p><strong>Gestión de errores con async/await:</strong> Modifica la función del ejercicio 4 para que capture cualquier posible error utilizando un blog try/catch.</p>
+        <pre>
+            async function esperaResultado2(){
+                try {
+                    let resultado = await promesa
+                    console.log(resultado);
+                } catch(err) {
+                    console.log(err); 
+                }
+            }
+            esperaResultado2()
+        </pre>
         <script>
             console.log("Ejercicio 5");
+            
+            async function esperaResultado2(){
+                try {
+                    let resultado = await promesa
+                    console.log(resultado);
+                } catch(err) {
+                    console.log(err); 
+                }
+            }
+            esperaResultado2()
         </script>
 
         <h2>Nivel 3</h2>
         <h3>Ejercicio 6</h3>
         <p><strong>Promise.all:</strong> Crea dos promesas que se resuelvan después de 2 y 3 segundos, respectivamente. Use Promise.all para esperar que ambas promesas se resuelvan, e imprime los resultados en la consola.</p>
+        <pre>
+            let promesa1 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Esta es la promesa número 1"), 2000);
+            });
+            let promesa2 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Esta es la promesa número 2"), 3000);
+            });
+
+            Promise.all([promesa1, promesa2])
+            .then(resultados => {
+                console.log(resultados[0]);
+                console.log(resultados[1]);
+            })
+            .catch(error => console.log(error))
+            
+        </pre>
         <script>
             console.log("Ejercicio 6");
+
+            let promesa1 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Esta es la promesa número 1"), 2000);
+            });
+            let promesa2 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Esta es la promesa número 2"), 3000);
+            });
+
+            Promise.all([promesa1, promesa2])
+            .then(resultados => {
+                console.log(resultados[0]);
+                console.log(resultados[1]);
+            })
+            .catch(error => console.log(error))
         </script>
     </div>
     
