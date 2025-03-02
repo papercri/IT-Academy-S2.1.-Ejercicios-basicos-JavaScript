@@ -2,9 +2,6 @@
 
 Este repositorio contiene una serie de ejercicios para practicar conceptos clave de JavaScript, como funciones de flecha, operador ternario, callbacks, operadores Rest y Spread, transformaciones de arrays, bucles y promesas.
 
-## Requisitos
-- Tener instalado [Node.js](https://nodejs.org/) para probar los ejercicios en un entorno local.
-- Un editor de código como [VS Code](https://code.visualstudio.com/).
 
 ## Estructura del Repositorio
 Cada conjunto de ejercicios está organizado en carpetas según el tema:
@@ -29,7 +26,7 @@ Cada carpeta contiene un archivo `index.js` con los ejercicios a resolver.
    
    cd IT-Academy-S2.1.-Ejercicios-basicos-JavaScript
    ```
-2. Abrir en el navegador el archivo index.html
+2. Abrir en el navegador el archivo index.html, donde encontrarás los links ordenados del proyecto.
 
 3. haz click en los links para abrir cada conjunto de ejercicios
 

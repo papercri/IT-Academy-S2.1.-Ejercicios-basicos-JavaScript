@@ -41,7 +41,6 @@
                 console.log("Por favor escriba la edad del conductor");
             }
         };
-
         puedeConducir(10);
         puedeConducir(60);
         puedeConducir(10.8);
@@ -52,18 +51,13 @@
         <pre>
     
             function comparacionNumeros(num1, num2){
-                if ((!isNaN(num1))&&(!isNaN(num2))){ 
-                if(num1!=num2){ 
-                    num1 > num2 ? console.log("El numero 1 es mayor del numero 2") : console.log("El numero 2 es mayor del numero 1") ; 
-                } 
-                    else { 
-                        console.log("por favor introduce dos numeros diferentes"); 
-                    } 
-                } else { 
-                    console.log("por favor introduce dos numeros"); 
-                } 
-            }  
-    
+                (!isNaN(num1))&&(!isNaN(num2))
+                    ? num1!==num2
+                        ? num1 > num2 ? console.log("El numero 1 es mayor del numero 2") 
+                                      : console.log("El numero 2 es mayor del numero 1")
+                        : console.log("por favor introduce dos numeros diferentes")
+                    : console.log("por favor introduce dos numeros")
+            };
             comparacionNumeros(2,4); 
             comparacionNumeros(2.4,1); 
             comparacionNumeros(2,2); 
@@ -74,17 +68,13 @@
         console.log("Ejercicio 2: ");
 
         function comparacionNumeros(num1, num2){
-            if ((!isNaN(num1))&&(!isNaN(num2))){
-            if(num1!=num2){
-                num1 > num2 ? console.log("El numero 1 es mayor del numero 2") : console.log("El numero 2 es mayor del numero 1") ;
-            }
-                else {
-                    console.log("por favor introduce dos numeros diferentes");
-                }
-            } else {
-                console.log("por favor introduce dos numeros");
-            }
-        }
+            (!isNaN(num1))&&(!isNaN(num2))
+                ? num1!==num2
+                    ? num1 > num2 ? console.log("El numero 1 es mayor del numero 2") 
+                                  : console.log("El numero 2 es mayor del numero 1")
+                    : console.log("por favor introduce dos numeros diferentes")
+                : console.log("por favor introduce dos numeros")
+        };
 
         comparacionNumeros(2,4);
         comparacionNumeros(2.4,1);
@@ -142,10 +132,10 @@
                     : ((a == b) && (b == c))
                     ? console.log("Hay tres numeros iguales, pon almenos dos numeros diferentes") 
                     : (a > b && a > c) 
-                        ? console.log("A es el numero mayor")
+                        ? console.log(`${a}(a) es el numero mayor`)
                         : (b > a && b > c) 
-                            ? console.log("B es el numero mayor")
-                            : console.log("C es el numero mayor");
+                            ? console.log(`${b}(b) es el numero mayor`)
+                            : console.log(`${c}(c) es el numero mayor`);
             }
     
             encontrarMaximo(10, 20, 30);
@@ -164,10 +154,10 @@
                 : ((a == b) && (b == c))
                 ? console.log("Hay tres numeros iguales, pon almenos dos numeros diferentes") 
                 : (a > b && a > c) 
-                    ? console.log("A es el numero mayor")
+                    ? console.log(`${a}(a) es el numero mayor`)
                     : (b > a && b > c) 
-                        ? console.log("B es el numero mayor")
-                        : console.log("C es el numero mayor");
+                        ? console.log(`${b}(b) es el numero mayor`)
+                        : console.log(`${c}(c) es el numero mayor`);
         }
 
         encontrarMaximo(10, 20, 30);
